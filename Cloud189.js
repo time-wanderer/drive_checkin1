@@ -219,7 +219,6 @@ const main = async () => {
         //重新获取主账号的空间信息
         cloudClient.setCookieMap(CookiesMap.get(firstUserName))
         const { familyCapacityInfo } = await cloudClient.getUserSizeInfo();
-        
 
         logger.log(
           `${firstSpace}实际：个人容量+ ${(cloudCapacityInfo2.totalSize - cloudCapacityInfo0.totalSize) / 1024 / 1024}M, 家庭容量+ ${(familyCapacityInfo.totalSize - familyCapacitySize2) / 1024 / 1024}M`
