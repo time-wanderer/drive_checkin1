@@ -197,7 +197,7 @@ class CloudClient {
         this.accessToken = null
         this.username = null
         this.password = null
-        this.cookieJar = null
+        this.cookie = null
     }
 
     // 获取用户大小信息
