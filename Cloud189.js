@@ -265,20 +265,7 @@ const main = async () => {
       }
 
     }
- // 定义 firstUserName（添加保护和类型转换）
-    const firstUserName = String(user?.data?.name || 'unknown');
-
-// 调试日志
-    console.log('Masking name:', firstUserName);
-
-// 调用 mask
     userNameInfo = mask(firstUserName, 3, 7);
-
-// 防御性 mask 函数
-    const mask = (s, start, end) => {
-      if (typeof s !== 'string') return s; // 非字符串直接返回（或返回默认值）
-      return s.split("").fill("*", start, end).join("");
- };
     const capacityChange = familyCapacitySize2 - familyCapacitySize;
     logger.log(`主账号${userNameInfo} 家庭容量+ ${capacityChange / 1024 / 1024}M`);
     logger.log("");
